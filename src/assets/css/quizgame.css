@@ -173,5 +173,14 @@ justify-content: space-between;
     padding: 50px;
 
 }
+.btn-tryagain{
+    padding: 10px 8px;
+    font-size: 18px;
+}
+
+.score-container{
+    display: flex;
+    flex-direction: column;
+}
 
 
