@@ -52,7 +52,7 @@ export default function Quizgame() {
 
         <div className='quizgame__container'>
 
-          {result && <Score score={score} questionlength={questions.length}/>  }
+          {result && <Score score={score} questionlength={questions.length} difficulty={difficulty} category={category}/>  }
  
           <div className='quizgame__header'>
 
