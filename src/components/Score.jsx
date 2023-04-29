@@ -9,7 +9,7 @@ export default function Score({score,questionlength}) {
        
     Your Score is : {score || 0}/{questionlength || 10}
 </span>
-<button onClick={()=>window.location.reload()} className='btn btn-tryagain'>Try Again</button>
+{/* <button onClick={()=>window.location.reload()} className='btn btn-tryagain'>Try Again</button> */}
       </div>
     </div>
   )
