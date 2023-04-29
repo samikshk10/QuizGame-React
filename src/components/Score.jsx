@@ -1,6 +1,22 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-export default function Score({score,questionlength}) {
+export default function Score({score,questionlength,difficulty,category}) {
+  const navigate = useNavigate();
+
+  const startgame = () => {
+    navigate('/quizgame',
+        {
+            state: {
+                difficulty: difficulty,
+                category: category
+            }
+            
+        });
+
+        window.location.reload();
+}
+
 
   return (
     <div className='result'>
@@ -9,7 +25,7 @@ export default function Score({score,questionlength}) {
        
     Your Score is : {score || 0}/{questionlength || 10}
 </span>
-{/* <button onClick={()=>window.location.reload()} className='btn btn-tryagain'>Try Again</button> */}
+ <button onClick={()=>startgame()} className='btn btn-tryagain'>Try Again</button> 
       </div>
     </div>
   )
